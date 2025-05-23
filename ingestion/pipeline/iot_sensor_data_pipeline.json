@@ -1,0 +1,31 @@
+{
+    "name": "Copy_iot_sensor_data_pipeline",
+    "properties": {
+        "activities": [
+            {
+                "name": "Copy_iot_sensor_data_activity",
+                "type": "Copy",
+                "typeProperties": {
+                    "source": {
+                        "type": "DelimitedTextSource"
+                    },
+                    "sink": {
+                        "type": "AzureSqlSink"
+                    }
+                },
+                "inputs": [
+                    {
+                        "referenceName": "iot_sensor_data_dataset",
+                        "type": "DatasetReference"
+                    }
+                ],
+                "outputs": [
+                    {
+                        "referenceName": "StagingSqlTable",
+                        "type": "DatasetReference"
+                    }
+                ]
+            }
+        ]
+    }
+}

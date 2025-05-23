@@ -1,0 +1,31 @@
+{
+    "name": "Copy_survey_responses_pipeline",
+    "properties": {
+        "activities": [
+            {
+                "name": "Copy_survey_responses_activity",
+                "type": "Copy",
+                "typeProperties": {
+                    "source": {
+                        "type": "DelimitedTextSource"
+                    },
+                    "sink": {
+                        "type": "AzureSqlSink"
+                    }
+                },
+                "inputs": [
+                    {
+                        "referenceName": "survey_responses_dataset",
+                        "type": "DatasetReference"
+                    }
+                ],
+                "outputs": [
+                    {
+                        "referenceName": "StagingSqlTable",
+                        "type": "DatasetReference"
+                    }
+                ]
+            }
+        ]
+    }
+}

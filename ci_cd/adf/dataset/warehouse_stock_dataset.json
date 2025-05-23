@@ -1,0 +1,19 @@
+{
+    "name": "warehouse_stock_dataset",
+    "properties": {
+        "linkedServiceName": {
+            "referenceName": "AzureBlobStorage1",
+            "type": "LinkedServiceReference"
+        },
+        "type": "DelimitedText",
+        "typeProperties": {
+            "location": {
+                "type": "AzureBlobFSLocation",
+                "filePath": "raw/warehouse_stock/",
+                "fileSystem": "datalake"
+            },
+            "columnDelimiter": ",",
+            "firstRowAsHeader": true
+        }
+    }
+}

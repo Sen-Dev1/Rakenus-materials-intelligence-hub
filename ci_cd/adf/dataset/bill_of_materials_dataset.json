@@ -1,0 +1,19 @@
+{
+    "name": "bill_of_materials_dataset",
+    "properties": {
+        "linkedServiceName": {
+            "referenceName": "AzureBlobStorage1",
+            "type": "LinkedServiceReference"
+        },
+        "type": "DelimitedText",
+        "typeProperties": {
+            "location": {
+                "type": "AzureBlobFSLocation",
+                "filePath": "raw/bill_of_materials/",
+                "fileSystem": "datalake"
+            },
+            "columnDelimiter": ",",
+            "firstRowAsHeader": true
+        }
+    }
+}

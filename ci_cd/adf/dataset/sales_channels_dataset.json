@@ -1,0 +1,19 @@
+{
+    "name": "sales_channels_dataset",
+    "properties": {
+        "linkedServiceName": {
+            "referenceName": "AzureBlobStorage1",
+            "type": "LinkedServiceReference"
+        },
+        "type": "DelimitedText",
+        "typeProperties": {
+            "location": {
+                "type": "AzureBlobFSLocation",
+                "filePath": "raw/sales_channels/",
+                "fileSystem": "datalake"
+            },
+            "columnDelimiter": ",",
+            "firstRowAsHeader": true
+        }
+    }
+}

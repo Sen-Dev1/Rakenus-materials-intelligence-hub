@@ -1,0 +1,31 @@
+{
+    "name": "Copy_workforce_planning_pipeline",
+    "properties": {
+        "activities": [
+            {
+                "name": "Copy_workforce_planning_activity",
+                "type": "Copy",
+                "typeProperties": {
+                    "source": {
+                        "type": "DelimitedTextSource"
+                    },
+                    "sink": {
+                        "type": "AzureSqlSink"
+                    }
+                },
+                "inputs": [
+                    {
+                        "referenceName": "workforce_planning_dataset",
+                        "type": "DatasetReference"
+                    }
+                ],
+                "outputs": [
+                    {
+                        "referenceName": "StagingSqlTable",
+                        "type": "DatasetReference"
+                    }
+                ]
+            }
+        ]
+    }
+}

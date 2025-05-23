@@ -1,0 +1,31 @@
+{
+    "name": "Copy_lead_funnels_pipeline",
+    "properties": {
+        "activities": [
+            {
+                "name": "Copy_lead_funnels_activity",
+                "type": "Copy",
+                "typeProperties": {
+                    "source": {
+                        "type": "DelimitedTextSource"
+                    },
+                    "sink": {
+                        "type": "AzureSqlSink"
+                    }
+                },
+                "inputs": [
+                    {
+                        "referenceName": "lead_funnels_dataset",
+                        "type": "DatasetReference"
+                    }
+                ],
+                "outputs": [
+                    {
+                        "referenceName": "StagingSqlTable",
+                        "type": "DatasetReference"
+                    }
+                ]
+            }
+        ]
+    }
+}

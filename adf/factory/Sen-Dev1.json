@@ -1,0 +1,9 @@
+{
+	"name": "Sen-Dev1",
+	"location": "northeurope",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "e35cf45d-6989-45a7-91bf-403760c621a1",
+		"tenantId": "5fb1e05a-303a-49de-a40a-ac2399a8a64d"
+	}
+}

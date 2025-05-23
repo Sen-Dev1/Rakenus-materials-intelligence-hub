@@ -1,0 +1,19 @@
+{
+    "name": "erp_transactions_dataset",
+    "properties": {
+        "linkedServiceName": {
+            "referenceName": "AzureBlobStorage1",
+            "type": "LinkedServiceReference"
+        },
+        "type": "DelimitedText",
+        "typeProperties": {
+            "location": {
+                "type": "AzureBlobFSLocation",
+                "filePath": "raw/erp_transactions/",
+                "fileSystem": "datalake"
+            },
+            "columnDelimiter": ",",
+            "firstRowAsHeader": true
+        }
+    }
+}

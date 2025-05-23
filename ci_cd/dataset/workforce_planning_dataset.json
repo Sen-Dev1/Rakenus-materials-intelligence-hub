@@ -1,0 +1,19 @@
+{
+    "name": "workforce_planning_dataset",
+    "properties": {
+        "linkedServiceName": {
+            "referenceName": "AzureBlobStorage1",
+            "type": "LinkedServiceReference"
+        },
+        "type": "DelimitedText",
+        "typeProperties": {
+            "location": {
+                "type": "AzureBlobFSLocation",
+                "filePath": "raw/workforce_planning/",
+                "fileSystem": "datalake"
+            },
+            "columnDelimiter": ",",
+            "firstRowAsHeader": true
+        }
+    }
+}

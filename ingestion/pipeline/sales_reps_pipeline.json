@@ -1,0 +1,31 @@
+{
+    "name": "Copy_sales_reps_pipeline",
+    "properties": {
+        "activities": [
+            {
+                "name": "Copy_sales_reps_activity",
+                "type": "Copy",
+                "typeProperties": {
+                    "source": {
+                        "type": "DelimitedTextSource"
+                    },
+                    "sink": {
+                        "type": "AzureSqlSink"
+                    }
+                },
+                "inputs": [
+                    {
+                        "referenceName": "sales_reps_dataset",
+                        "type": "DatasetReference"
+                    }
+                ],
+                "outputs": [
+                    {
+                        "referenceName": "StagingSqlTable",
+                        "type": "DatasetReference"
+                    }
+                ]
+            }
+        ]
+    }
+}
