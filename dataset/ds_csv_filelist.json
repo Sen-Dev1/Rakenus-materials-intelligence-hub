@@ -1,0 +1,33 @@
+{
+	"name": "ds_csv_filelist",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_adls_datalake",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "filelist.csv",
+				"folderPath": "config",
+				"fileSystem": "raw"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "FileName",
+				"type": "String"
+			},
+			{
+				"name": "FolderName",
+				"type": "String"
+			}
+		]
+	}
+}
