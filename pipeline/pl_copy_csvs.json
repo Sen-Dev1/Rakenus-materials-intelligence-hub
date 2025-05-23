@@ -1,0 +1,9 @@
+{
+	"name": "pl_copy_csvs",
+	"properties": {
+		"folder": {
+			"name": "PIP"
+		},
+		"annotations": []
+	}
+}
