@@ -1,0 +1,55 @@
+{
+	"name": "ds_csv_parameterized",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_adls_datalake",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"FolderName": {
+				"type": "string"
+			},
+			"FileName": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileSystem": "raw"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "ComplianceID",
+				"type": "String"
+			},
+			{
+				"name": "DocumentType",
+				"type": "String"
+			},
+			{
+				"name": "ReferenceID",
+				"type": "String"
+			},
+			{
+				"name": "Description",
+				"type": "String"
+			},
+			{
+				"name": "ComplianceDate",
+				"type": "String"
+			},
+			{
+				"name": "PlantID",
+				"type": "String"
+			}
+		]
+	}
+}
