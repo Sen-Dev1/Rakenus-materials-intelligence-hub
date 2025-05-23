@@ -18,6 +18,8 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
+				"fileName": "@dataset().FileName",
+				"folderPath": "@dataset().FolderName",
 				"fileSystem": "raw"
 			},
 			"columnDelimiter": ",",
