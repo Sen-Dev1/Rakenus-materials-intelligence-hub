@@ -1,0 +1,9 @@
+{
+	"name": "Rakenus",
+	"location": "northeurope",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "f7ee037f-84cc-41c6-934c-65102685f013",
+		"tenantId": "5fb1e05a-303a-49de-a40a-ac2399a8a64d"
+	}
+}
