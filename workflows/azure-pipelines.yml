@@ -1,0 +1,24 @@
+# azure-pipelines.yml
+trigger:
+  branches:
+    include:
+      - main
+
+pool:
+  vmImage: 'windows-latest'
+
+steps:
+- checkout: self
+
+- task: AzureResourceManagerTemplateDeployment@3
+  inputs:
+    deploymentScope: 'Resource Group'
+    azureResourceManagerConnection: 'MyAzureServiceConnection'
+    subscriptionId: '0698cfcc-ea2f-4e17-9af6-cd1436054d97'
+    action: 'Create Or Update Resource Group'
+    resourceGroupName: 'kafkaeventstream'
+    location: 'East US'
+    templateLocation: 'Linked artifact'
+    csmFile: 'ARMTemplate/ARMTemplateForFactory.json'
+    csmParametersFile: 'ARMTemplate/ARMTemplateParametersForFactory.json'
+
