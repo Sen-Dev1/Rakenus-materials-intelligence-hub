@@ -2,7 +2,7 @@
 import re
 
 # Input and output paths
-INPUT_FILE = "ravago_datawarehouse_ddl.sql"
+INPUT_FILE = "rakenus_full_ddl.sql"
 OUTPUT_DIR = "ddl_parts"
 
 # Ensure output directory exists
