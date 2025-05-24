@@ -9,8 +9,8 @@
         "typeProperties": {
             "location": {
                 "type": "AzureBlobFSLocation",
-                "filePath": "raw/safety_incidents/",
-                "fileSystem": "datalake"
+                "fileSystem": "datalake",
+                "filePath": "raw/hr/incidents/"
             },
             "columnDelimiter": ",",
             "firstRowAsHeader": true

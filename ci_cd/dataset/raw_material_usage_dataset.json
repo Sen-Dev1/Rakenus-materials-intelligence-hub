@@ -9,8 +9,8 @@
         "typeProperties": {
             "location": {
                 "type": "AzureBlobFSLocation",
-                "filePath": "raw/raw_material_usage/",
-                "fileSystem": "datalake"
+                "fileSystem": "datalake",
+                "filePath": "raw/procurement/material_usage/"
             },
             "columnDelimiter": ",",
             "firstRowAsHeader": true

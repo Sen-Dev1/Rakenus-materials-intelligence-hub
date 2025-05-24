@@ -9,8 +9,8 @@
         "typeProperties": {
             "location": {
                 "type": "AzureBlobFSLocation",
-                "filePath": "raw/survey_responses/",
-                "fileSystem": "datalake"
+                "fileSystem": "datalake",
+                "filePath": "raw/crm/surveys/"
             },
             "columnDelimiter": ",",
             "firstRowAsHeader": true

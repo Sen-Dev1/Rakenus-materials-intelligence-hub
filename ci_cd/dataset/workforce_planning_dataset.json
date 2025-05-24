@@ -9,8 +9,8 @@
         "typeProperties": {
             "location": {
                 "type": "AzureBlobFSLocation",
-                "filePath": "raw/workforce_planning/",
-                "fileSystem": "datalake"
+                "fileSystem": "datalake",
+                "filePath": "raw/hr/planning/"
             },
             "columnDelimiter": ",",
             "firstRowAsHeader": true

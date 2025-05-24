@@ -9,8 +9,8 @@
         "typeProperties": {
             "location": {
                 "type": "AzureBlobFSLocation",
-                "filePath": "raw/emissions/",
-                "fileSystem": "datalake"
+                "fileSystem": "datalake",
+                "filePath": "raw/compliance/emissions/"
             },
             "columnDelimiter": ",",
             "firstRowAsHeader": true

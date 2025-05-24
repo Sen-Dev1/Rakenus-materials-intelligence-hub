@@ -9,8 +9,8 @@
         "typeProperties": {
             "location": {
                 "type": "AzureBlobFSLocation",
-                "filePath": "raw/employee_master/",
-                "fileSystem": "datalake"
+                "fileSystem": "datalake",
+                "filePath": "raw/hr/employees/"
             },
             "columnDelimiter": ",",
             "firstRowAsHeader": true

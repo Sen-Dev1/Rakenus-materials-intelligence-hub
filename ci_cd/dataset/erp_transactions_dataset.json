@@ -9,8 +9,8 @@
         "typeProperties": {
             "location": {
                 "type": "AzureBlobFSLocation",
-                "filePath": "raw/erp_transactions/",
-                "fileSystem": "datalake"
+                "fileSystem": "datalake",
+                "filePath": "raw/integration/erp/"
             },
             "columnDelimiter": ",",
             "firstRowAsHeader": true

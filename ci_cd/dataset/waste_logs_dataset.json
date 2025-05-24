@@ -9,8 +9,8 @@
         "typeProperties": {
             "location": {
                 "type": "AzureBlobFSLocation",
-                "filePath": "raw/waste_logs/",
-                "fileSystem": "datalake"
+                "fileSystem": "datalake",
+                "filePath": "raw/compliance/waste/"
             },
             "columnDelimiter": ",",
             "firstRowAsHeader": true

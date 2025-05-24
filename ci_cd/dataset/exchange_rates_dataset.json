@@ -9,8 +9,8 @@
         "typeProperties": {
             "location": {
                 "type": "AzureBlobFSLocation",
-                "filePath": "raw/exchange_rates/",
-                "fileSystem": "datalake"
+                "fileSystem": "datalake",
+                "filePath": "raw/finance/exchange_rates/"
             },
             "columnDelimiter": ",",
             "firstRowAsHeader": true

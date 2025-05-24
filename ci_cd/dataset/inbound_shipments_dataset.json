@@ -9,8 +9,8 @@
         "typeProperties": {
             "location": {
                 "type": "AzureBlobFSLocation",
-                "filePath": "raw/inbound_shipments/",
-                "fileSystem": "datalake"
+                "fileSystem": "datalake",
+                "filePath": "raw/inventory/inbound/"
             },
             "columnDelimiter": ",",
             "firstRowAsHeader": true
