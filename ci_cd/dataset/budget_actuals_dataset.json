@@ -6,10 +6,32 @@
             "type": "LinkedServiceReference"
         },
         "type": "DelimitedText",
+        "schema": [
+            {
+                "name": "Department",
+                "type": "String"
+            },
+            {
+                "name": "BudgetAmount",
+                "type": "Decimal"
+            },
+            {
+                "name": "ActualAmount",
+                "type": "Decimal"
+            },
+            {
+                "name": "Month",
+                "type": "String"
+            },
+            {
+                "name": "Year",
+                "type": "Int32"
+            }
+        ],
         "typeProperties": {
             "location": {
                 "type": "AzureBlobFSLocation",
-                "fileSystem": "datalake",
+                "fileSystem": "raw",
                 "filePath": "raw/finance/budget_actuals/"
             },
             "columnDelimiter": ",",
