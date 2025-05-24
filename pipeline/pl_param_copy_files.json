@@ -1,0 +1,113 @@
+{
+	"name": "pl_param_copy_files",
+	"properties": {
+		"activities": [
+			{
+				"name": "Lookup_Config",
+				"type": "Lookup",
+				"dependsOn": [],
+				"policy": {
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource"
+					},
+					"firstRowOnly": false
+				}
+			},
+			{
+				"name": "ForEach_CopyLoop",
+				"type": "ForEach",
+				"dependsOn": [
+					{
+						"activity": "Lookup_Config",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"items": {
+						"value": "@activity('Lookup_Config').output.value",
+						"type": "Expression"
+					},
+					"activities": [
+						{
+							"name": "Copy_With_Logging",
+							"type": "Copy",
+							"dependsOn": [],
+							"policy": {
+								"retry": 0,
+								"retryIntervalInSeconds": 30,
+								"secureOutput": false,
+								"secureInput": false
+							},
+							"userProperties": [],
+							"typeProperties": {
+								"source": {
+									"type": "DelimitedTextSource"
+								},
+								"sink": {
+									"type": "DelimitedTextSink"
+								},
+								"enableStaging": false
+							},
+							"inputs": [
+								{
+									"referenceName": "ds_csv_parameterized",
+									"type": "DatasetReference",
+									"parameters": {
+										"FolderName": "@item().FolderName",
+										"FileName": "@item().FileName"
+									}
+								}
+							],
+							"outputs": [
+								{
+									"referenceName": "ds_csv_staging",
+									"type": "DatasetReference",
+									"parameters": {
+										"FolderName": "@item().FolderName",
+										"FileName": "@item().FileName"
+									}
+								}
+							]
+						},
+						{
+							"name": "LogSuccess",
+							"type": "AppendVariable",
+							"dependsOn": [
+								{
+									"activity": "Copy_With_Logging",
+									"dependencyConditions": [
+										"Succeeded"
+									]
+								}
+							],
+							"userProperties": [],
+							"typeProperties": {
+								"variableName": "successLog",
+								"value": {
+									"value": "@item().FileName",
+									"type": "Expression"
+								}
+							}
+						}
+					]
+				}
+			}
+		],
+		"variables": {
+			"successLog": {
+				"type": "Array"
+			}
+		},
+		"annotations": []
+	}
+}
