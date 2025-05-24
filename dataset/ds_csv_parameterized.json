@@ -18,8 +18,14 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": "@dataset().FileName",
-				"folderPath": "@dataset().FolderName",
+				"fileName": {
+					"value": "@dataset().FileName",
+					"type": "Expression"
+				},
+				"folderPath": {
+					"value": "@dataset().FolderName",
+					"type": "Expression"
+				},
 				"fileSystem": "raw"
 			},
 			"columnDelimiter": ",",
@@ -27,31 +33,6 @@
 			"firstRowAsHeader": true,
 			"quoteChar": "\""
 		},
-		"schema": [
-			{
-				"name": "ComplianceID",
-				"type": "String"
-			},
-			{
-				"name": "DocumentType",
-				"type": "String"
-			},
-			{
-				"name": "ReferenceID",
-				"type": "String"
-			},
-			{
-				"name": "Description",
-				"type": "String"
-			},
-			{
-				"name": "ComplianceDate",
-				"type": "String"
-			},
-			{
-				"name": "PlantID",
-				"type": "String"
-			}
-		]
+		"schema": []
 	}
 }
