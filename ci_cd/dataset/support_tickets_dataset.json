@@ -9,8 +9,8 @@
         "typeProperties": {
             "location": {
                 "type": "AzureBlobFSLocation",
-                "filePath": "raw/support_tickets/",
-                "fileSystem": "datalake"
+                "fileSystem": "datalake",
+                "filePath": "raw/crm/support/"
             },
             "columnDelimiter": ",",
             "firstRowAsHeader": true

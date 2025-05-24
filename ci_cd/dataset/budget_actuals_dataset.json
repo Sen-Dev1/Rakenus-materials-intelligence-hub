@@ -9,8 +9,8 @@
         "typeProperties": {
             "location": {
                 "type": "AzureBlobFSLocation",
-                "filePath": "raw/budget_actuals/",
-                "fileSystem": "datalake"
+                "fileSystem": "datalake",
+                "filePath": "raw/finance/budget_actuals/"
             },
             "columnDelimiter": ",",
             "firstRowAsHeader": true

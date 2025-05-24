@@ -9,8 +9,8 @@
         "typeProperties": {
             "location": {
                 "type": "AzureBlobFSLocation",
-                "filePath": "raw/product_profit_margins/",
-                "fileSystem": "datalake"
+                "fileSystem": "datalake",
+                "filePath": "raw/finance/margins/"
             },
             "columnDelimiter": ",",
             "firstRowAsHeader": true

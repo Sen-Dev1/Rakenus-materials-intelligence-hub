@@ -9,8 +9,8 @@
         "typeProperties": {
             "location": {
                 "type": "AzureBlobFSLocation",
-                "filePath": "raw/customer_orders/",
-                "fileSystem": "datalake"
+                "fileSystem": "datalake",
+                "filePath": "raw/sales/customer_orders/"
             },
             "columnDelimiter": ",",
             "firstRowAsHeader": true

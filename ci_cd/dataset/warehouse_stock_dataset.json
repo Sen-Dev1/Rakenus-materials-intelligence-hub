@@ -9,8 +9,8 @@
         "typeProperties": {
             "location": {
                 "type": "AzureBlobFSLocation",
-                "filePath": "raw/warehouse_stock/",
-                "fileSystem": "datalake"
+                "fileSystem": "datalake",
+                "filePath": "raw/inventory/stock_levels/"
             },
             "columnDelimiter": ",",
             "firstRowAsHeader": true

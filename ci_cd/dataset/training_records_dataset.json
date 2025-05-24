@@ -9,8 +9,8 @@
         "typeProperties": {
             "location": {
                 "type": "AzureBlobFSLocation",
-                "filePath": "raw/training_records/",
-                "fileSystem": "datalake"
+                "fileSystem": "datalake",
+                "filePath": "raw/hr/training/"
             },
             "columnDelimiter": ",",
             "firstRowAsHeader": true

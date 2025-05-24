@@ -9,8 +9,8 @@
         "typeProperties": {
             "location": {
                 "type": "AzureBlobFSLocation",
-                "filePath": "raw/invoices/",
-                "fileSystem": "datalake"
+                "fileSystem": "datalake",
+                "filePath": "raw/sales/invoices/"
             },
             "columnDelimiter": ",",
             "firstRowAsHeader": true

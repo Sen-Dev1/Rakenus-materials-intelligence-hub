@@ -9,8 +9,8 @@
         "typeProperties": {
             "location": {
                 "type": "AzureBlobFSLocation",
-                "filePath": "raw/recycling_logs/",
-                "fileSystem": "datalake"
+                "fileSystem": "datalake",
+                "filePath": "raw/production/recycling/"
             },
             "columnDelimiter": ",",
             "firstRowAsHeader": true
