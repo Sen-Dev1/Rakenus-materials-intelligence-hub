@@ -6,10 +6,24 @@
             "type": "LinkedServiceReference"
         },
         "type": "DelimitedText",
+        "schema": [
+            {
+                "name": "ID",
+                "type": "String"
+            },
+            {
+                "name": "Name",
+                "type": "String"
+            },
+            {
+                "name": "Value",
+                "type": "String"
+            }
+        ],
         "typeProperties": {
             "location": {
                 "type": "AzureBlobFSLocation",
-                "fileSystem": "datalake",
+                "fileSystem": "raw",
                 "filePath": "raw/compliance/emissions/"
             },
             "columnDelimiter": ",",

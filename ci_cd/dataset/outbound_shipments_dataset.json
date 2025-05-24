@@ -6,10 +6,40 @@
             "type": "LinkedServiceReference"
         },
         "type": "DelimitedText",
+        "schema": [
+            {
+                "name": "ShipmentID",
+                "type": "String"
+            },
+            {
+                "name": "WarehouseID",
+                "type": "String"
+            },
+            {
+                "name": "ProductID",
+                "type": "String"
+            },
+            {
+                "name": "Quantity",
+                "type": "Int32"
+            },
+            {
+                "name": "ShippedDate",
+                "type": "DateTime"
+            },
+            {
+                "name": "CarrierID",
+                "type": "String"
+            },
+            {
+                "name": "TrackingNumber",
+                "type": "String"
+            }
+        ],
         "typeProperties": {
             "location": {
                 "type": "AzureBlobFSLocation",
-                "fileSystem": "datalake",
+                "fileSystem": "raw",
                 "filePath": "raw/inventory/outbound/"
             },
             "columnDelimiter": ",",

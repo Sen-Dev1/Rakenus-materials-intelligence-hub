@@ -1,0 +1,45 @@
+{
+    "name": "product_returns_dataset",
+    "properties": {
+        "linkedServiceName": {
+            "referenceName": "AzureBlobStorage1",
+            "type": "LinkedServiceReference"
+        },
+        "type": "DelimitedText",
+        "schema": [
+            {
+                "name": "ReturnID",
+                "type": "String"
+            },
+            {
+                "name": "OrderID",
+                "type": "String"
+            },
+            {
+                "name": "Reason",
+                "type": "String"
+            },
+            {
+                "name": "Condition",
+                "type": "String"
+            },
+            {
+                "name": "RefundAmount",
+                "type": "Decimal"
+            },
+            {
+                "name": "ReturnDate",
+                "type": "DateTime"
+            }
+        ],
+        "typeProperties": {
+            "location": {
+                "type": "AzureBlobFSLocation",
+                "fileSystem": "staging",
+                "filePath": "staging/sales/returns/"
+            },
+            "columnDelimiter": ",",
+            "firstRowAsHeader": true
+        }
+    }
+}

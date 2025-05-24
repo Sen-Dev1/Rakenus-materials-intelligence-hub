@@ -6,10 +6,44 @@
             "type": "LinkedServiceReference"
         },
         "type": "DelimitedText",
+        "schema": [
+            {
+                "name": "OrderID",
+                "type": "String"
+            },
+            {
+                "name": "CustomerID",
+                "type": "String"
+            },
+            {
+                "name": "ProductID",
+                "type": "String"
+            },
+            {
+                "name": "Quantity",
+                "type": "Int32"
+            },
+            {
+                "name": "OrderDate",
+                "type": "DateTime"
+            },
+            {
+                "name": "UnitPrice",
+                "type": "Decimal"
+            },
+            {
+                "name": "Discount",
+                "type": "Decimal"
+            },
+            {
+                "name": "SalesRepID",
+                "type": "String"
+            }
+        ],
         "typeProperties": {
             "location": {
                 "type": "AzureBlobFSLocation",
-                "fileSystem": "datalake",
+                "fileSystem": "raw",
                 "filePath": "raw/sales/customer_orders/"
             },
             "columnDelimiter": ",",

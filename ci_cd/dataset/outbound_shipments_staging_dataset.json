@@ -1,0 +1,49 @@
+{
+    "name": "outbound_shipments_dataset",
+    "properties": {
+        "linkedServiceName": {
+            "referenceName": "AzureBlobStorage1",
+            "type": "LinkedServiceReference"
+        },
+        "type": "DelimitedText",
+        "schema": [
+            {
+                "name": "ShipmentID",
+                "type": "String"
+            },
+            {
+                "name": "WarehouseID",
+                "type": "String"
+            },
+            {
+                "name": "ProductID",
+                "type": "String"
+            },
+            {
+                "name": "Quantity",
+                "type": "Int32"
+            },
+            {
+                "name": "ShippedDate",
+                "type": "DateTime"
+            },
+            {
+                "name": "CarrierID",
+                "type": "String"
+            },
+            {
+                "name": "TrackingNumber",
+                "type": "String"
+            }
+        ],
+        "typeProperties": {
+            "location": {
+                "type": "AzureBlobFSLocation",
+                "fileSystem": "staging",
+                "filePath": "staging/inventory/outbound/"
+            },
+            "columnDelimiter": ",",
+            "firstRowAsHeader": true
+        }
+    }
+}
